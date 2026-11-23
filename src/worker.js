@@ -27,6 +27,19 @@ export default {
       });
     }
 
+    // Diagnóstico: /?aviso-test=1 envía un aviso de prueba y muestra el resultado (no revela el tema)
+    if (url.searchParams.has('aviso-test')) {
+      if (!env.NTFY_TOPIC) return Response.json({ ok: false, error: 'Falta la variable NTFY_TOPIC en este Worker' });
+      url.searchParams.delete('aviso-test');
+      url.searchParams.set('p', 'prueba');
+      try {
+        const r = await notify(env.NTFY_TOPIC, request, url, request.headers.get('user-agent') || '');
+        return Response.json({ ok: r.ok, ntfy_status: r.status, ntfy_body: (await r.text()).slice(0, 300) });
+      } catch (e) {
+        return Response.json({ ok: false, error: String(e) });
+      }
+    }
+
     const res = await env.ASSETS.fetch(request);
 
     const type = res.headers.get('content-type') || '';
@@ -39,7 +52,7 @@ export default {
     );
     if (!ua || BOTS.test(ua) || prefetch || cookies.includes('od_me=1') || cookies.includes('od_seen=1')) return res;
 
-    if (env.NTFY_TOPIC) ctx.waitUntil(notify(env.NTFY_TOPIC, request, url, ua).catch(() => {}));
+    if (env.NTFY_TOPIC) ctx.waitUntil(notify(env.NTFY_TOPIC, request, url, ua).catch((e) => console.log('ntfy fallo', String(e))));
 
     const out = new Response(res.body, res);
     out.headers.append('Set-Cookie', `od_seen=1; Path=/; Max-Age=${REPEAT_MIN * 60}; Secure; HttpOnly; SameSite=Lax`);
@@ -67,7 +80,7 @@ async function notify(topic, request, url, ua) {
     `Hora: ${hour}`,
   ].filter(Boolean);
 
-  await fetch('https://ntfy.sh/', {
+  const r = await fetch('https://ntfy.sh/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -78,6 +91,8 @@ async function notify(topic, request, url, ua) {
       click: url.origin + url.pathname,
     }),
   });
+  if (!r.ok) console.log('ntfy error', r.status, await r.clone().text());
+  return r;
 }
 
 function device(ua) {
