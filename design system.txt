@@ -1,0 +1,113 @@
+este es el analisis según su perfil de instagram:
+1. Diagnóstico de Branding e Identidad Visual
+El perfil proyecta una mezcla entre estética clínica moderna ("lujo accesible") y marketing promocional directo:
+
+Paleta Cromática: Predomina un contraste alto entre negro profundo / gris carbón (visto en el isotipo y en los fondos de sus piezas gráficas fijadas) y blanco puro, apoyado por tonos rosa/coral natural provenientes de la fotografía clínica de sonrisas y encías. El negro aporta sofisticación y autoridad técnica ("Armonía dental diseñada con precisión"), mientras que el blanco refuerza la higiene.
+Tipografía y Logotipo: El isotipo es un emblema circular minimalista con una muela geométrica estilizada en el centro, acompañado de un wordmark con serifas finas de aire editorial/lujo (Odontics). Sin embargo, en las piezas gráficas internas usan tipografías sans-serif condensadas y en mayúsculas para titulares promocionales, generando cierta fricción visual entre "clínica boutique" y "volante de oferta".
+Tono de Voz y Propuesta de Valor: Se posicionan con autoridad ("Especialistas con más de 15 años de experiencia" y enfoque en Turismo Dental), pero su contenido en el feed baja a un tono muy cercano, local y basado en precio/urgencia (ej. ortodoncia desde $74.900 COP, limpieza + blanqueamiento en $199.900 COP, uso de humor y Reels virales).
+Auditoría UX/UI (Del Perfil Actual hacia la Web)
+Desde una perspectiva de experiencia de usuario y arquitectura de conversión, el perfil presenta tres hallazgos clave que debes resolver al trasladarlos a la web:
+Fricción en la Conversión (El embudo actual): Actualmente dependen de un único enlace genérico de WhatsApp (wa.link/uol5jt) y dos números telefónicos distintos en las descripciones (+573007668469 y +573017183948). En la web, esto debe unificarse en un sistema de agendamiento inteligente con pre-selección de servicio (Valoración, Diseño de Sonrisa, Ortodoncia, Turismo Dental) para filtrar leads calificados.
+Dualidad de Audiencia (Local vs. Internacional): El perfil intenta hablarle al mismo tiempo al paciente local de Sabaneta/Medellín (que busca cuotas de $74.900) y al paciente de Turismo Dental (Colombia, Brasil, EE. UU., según las banderas de su bio). Mezclar precios low-cost con tratamientos de carillas cerámicas (Ceramic Veneers) de alto ticket en la misma vista diluye la percepción de valor.
+Prueba Social Fragmentada: Tienen 11.7 mil seguidores y casos de éxito ("Antes y Después"), pero están dispersos entre historias destacadas y Reels sin una estructura de caso clínico que genere confianza médica real.
+Arquitectura y Dirección de Arte para el Sitio Web
+Para construir un sitio web que respete la esencia de la marca pero la eleve a un estándar de agencia de alto rendimiento, aplica estas decisiones de diseño y desarrollo:
+Dirección Visual (UI)
+Sistema de Color ("Dark Luxury & Clinical Clean"): No hagas una web 100% oscura porque en salud puede verse intimidante. Usa una base Blanco Puro (#FFFFFF) y Gris Hielo (#F8F9FA) para las secciones médicas y de servicios, y reserva el Negro Carbón (#111111) de su logotipo para el Hero Section (portada), tarjetas de Turismo Dental y el Footer. Añade un acento sutil en Dorado Champán o Verde Salvia médico para los botones de acción (CTA) en lugar de colores chillones.
+Tipografía Híbrida: Empareja una fuente Serif moderna y elegante (como Playfair Display o Cormorant Garamond) para los titulares principales—manteniendo la línea del logo Odontics—con una Sans-Serif geométrica ultra legible (Plus Jakarta Sans o Inter) para párrafos, precios y formularios.
+Tratamiento Fotográfico: Evita los collages saturados de texto que tienen en los posts fijados de Instagram. Usa fotografías de alto formato con iluminación limpia, bordes redondeados suaves (border-radius: 12px o 16px) y un componente interactivo de Slider Antes / Después para los microdiseños y carillas cerámicas.
+
+Estructura de Información (UX)
+
+Hero Section de Doble Intención: Un titular enfocado en precisión estética ("Armonía dental diseñada con precisión"), acompañado de dos rutas claras: "Agendar Valoración en Sabaneta" (flujo rápido local) y "Planes de Turismo Dental" (flujo internacional).
+Sección de Servicios Jerarquizada:
+Tratamientos Estéticos (High Ticket): Carillas Cerámicas, Diseño y Microdiseño de Sonrisa.
+Salud y Funcionalidad: Ortodoncia, Limpieza y Blanqueamiento (aquí puedes integrar las promociones vigentes como ganchos de entrada sin afectar la estética de los tratamientos premium).
+Módulo Exclusivo de Turismo Dental: Sección dedicada con soporte bilingüe (ES/EN), explicando el paso a paso para pacientes del exterior (valoración virtual previa, tiempos de estadía en Medellín/Sabaneta, y garantías).
+Credibilidad Médica y Sede: Mostrar al equipo de especialistas (como la Dra. Elizeth etiquetada en su perfil) con sus credenciales, los +15 años de trayectoria y un mapa interactivo hacia su sede en Carrera 43B #72 Sur 89, Sabaneta.
+
+
+
+y el design system
+
+Este Design System toma el ADN visual de Odontics —el emblema de precisión y el contraste negro/blanco de su identidad— y lo estructura para un sitio web de alta conversión que equilibra la estética clínica de lujo (carillas cerámicas y turismo dental) con la claridad funcional (ortodoncia y valoraciones locales en Sabaneta).1. Tokens de Color y Paleta HexadecimalLa estrategia alterna superficies limpias de clínica médica con zonas oscuras de alto contraste para piezas de lujo y turismo dental, evitando el rojo o azul saturado genérico de consultorios tradicionales.Token / RolHexUso en Interfaz--bg-surface#FFFFFFFondo principal de secciones clínicas, fichas de servicio y formularios.--bg-subtle#F7F8FAFondos alternos, tarjetas de planes y contenedores de casos clínicos.--bg-obsidian#101012Hero Section, módulos de Turismo Dental, tarjetas High-Ticket y Footer.--bg-obsidian-elevated#1A1A1ESuperficies elevadas o hover sobre fondos oscuros.--text-primary#121316Títulos y cuerpo principal sobre fondos claros.--text-secondary#525660Descripciones, subtítulos secundarios y metadatos clínicos.--text-on-dark#F8F9FATítulos y texto principal sobre fondos oscuros (#101012).--text-muted-dark#A1A6B3Subtítulos y notas secundarias sobre fondos oscuros.--accent-champagne#C5A059Acento editorial sutil (bordes finos, etiquetas VIP / Dental Tourism, detalles de precisión).--accent-clinical#0F766EVerde azulado médico sobrio para estados activos, confianza clínica o indicadores de disponibilidad.--border-light#E4E7ECBordes sutiles de tarjetas y divisores en modo claro.--border-dark#26272CBordes sutiles sobre superficies oscuras.2. Escala TipográficaCombinamos una Serif editorial (Cormorant Garamond) que dialoga con la elegancia del wordmark Odontics y una Sans-Serif geométrica (Plus Jakarta Sans) con tabular-nums para que precios en COP, cuotas y tiempos de tratamiento se alineen con exactitud.Display / Hero (text-hero): clamp(2.5rem, 5vw, 4.25rem) (40px–68px) · Cormorant Garamond · font-weight: 600 · line-height: 1.08 · letter-spacing: -0.02em.H2 Secciones (text-h2): clamp(1.875rem, 3.5vw, 2.75rem) (30px–44px) · Cormorant Garamond · font-weight: 600 · line-height: 1.15.H3 Tarjetas / Servicios (text-h3): 1.25rem (20px) · Plus Jakarta Sans · font-weight: 600 · line-height: 1.3.Cuerpo Principal (text-body): 1rem (16px) · Plus Jakarta Sans · font-weight: 400 · line-height: 1.65.Micro-copy / Eyebrows (text-eyebrow): 0.75rem (12px) · Plus Jakarta Sans · font-weight: 600 · letter-spacing: 0.14em · text-transform: uppercase.Precios y Cifras (text-price): Plus Jakarta Sans con font-variant-numeric: tabular-nums para evitar saltos visuales en planes y cuotas.3. Estilos de Botones (CTAs)Definimos tres variantes con transiciones suaves (200ms ease-out), estados :focus-visible accesibles y áreas táctiles cómodas (min-height: 44px):Botón Primario (btn-primary): Fondo #101012, texto #FFFFFF, borde 1px solid #101012. Ideal para "Agendar Valoración" en secciones claras. Al hacer hover, pasa a #26272C con ligera elevación.Botón Acento / Turismo Dental (btn-accent): Fondo #C5A059, texto #101012 (alto contraste legible), font-weight: 600. Reservado para llamadas a la acción de alto valor o planes internacionales.Botón Secundario / Ghost (btn-secondary): Fondo transparente con borde 1px solid #D0D5DD (en claro) o 1px solid #343740 (en oscuro). Útil para "Ver Casos Clínicos" o "Cómo Funciona el Turismo Dental".4. Implementación en CSS Variables y Tailwind v4Puedes integrar estos tokens directamente en tu hoja de estilos global (app.css o globals.css) usando Tailwind CSS v4 (@theme):CSS@import "tailwindcss";
+
+@theme {
+  /* Paleta de colores */
+  --color-surface: #FFFFFF;
+  --color-subtle: #F7F8FA;
+  --color-obsidian: #101012;
+  --color-obsidian-elevated: #1A1A1E;
+
+  --color-ink-primary: #121316;
+  --color-ink-secondary: #525660;
+  --color-ink-dark: #F8F9FA;
+  --color-ink-muted-dark: #A1A6B3;
+
+  --color-champagne: #C5A059;
+  --color-champagne-hover: #B38E46;
+  --color-clinical: #0F766E;
+
+  --color-border-light: #E4E7EC;
+  --color-border-dark: #26272C;
+
+  /* Familias tipográficas */
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radios de borde */
+  --radius-card: 1rem;
+  --radius-btn: 0.5rem;
+  --radius-pill: 9999px;
+
+  /* Sombras sutiles */
+  --shadow-card: 0 10px 30px -10px rgba(16, 16, 18, 0.08);
+  --shadow-float: 0 18px 40px -12px rgba(16, 16, 18, 0.16);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-ink-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-[var(--radius-btn)] bg-obsidian px-6 py-3 text-sm font-semibold text-ink-dark transition-all duration-200 hover:bg-[#26272C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian disabled:opacity-50;
+  }
+
+  .btn-accent {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-[var(--radius-btn)] bg-champagne px-6 py-3 text-sm font-semibold text-obsidian transition-all duration-200 hover:bg-champagne-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne disabled:opacity-50;
+  }
+
+  .btn-secondary-light {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-[var(--radius-btn)] border border-border-light bg-transparent px-6 py-3 text-sm font-medium text-ink-primary transition-colors duration-200 hover:bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian;
+  }
+
+  .btn-secondary-dark {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-[var(--radius-btn)] border border-border-dark bg-transparent px-6 py-3 text-sm font-medium text-ink-dark transition-colors duration-200 hover:bg-obsidian-elevated focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne;
+  }
+
+  .card-clinical {
+    @apply rounded-[var(--radius-card)] border border-border-light bg-surface p-6 shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .card-luxury-dark {
+    @apply rounded-[var(--radius-card)] border border-border-dark bg-obsidian-elevated p-6 text-ink-dark;
+  }
+
+  .eyebrow-tag {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.14em] text-champagne;
+  }
+}
